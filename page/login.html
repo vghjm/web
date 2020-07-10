@@ -3,6 +3,16 @@
 <head>
   <title>테스트</title>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="492955938765-1cknc8fa0447kgd0rgav77nh8g0vn82i.apps.googleusercontent.com">
+  <script>
+    function onSignIn(googleUser){
+      var profile = googleUser.getBasicProfile();
+      console.log('ID: ' + profile.getId());
+    }
+  </script>
 </head>
 <body>
 <h1><a href="../index.html">처음으로</a></h1>
@@ -30,6 +40,9 @@
       </div>
     </a>
   </div>
+
+  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
 
   <div>
     <a href="find_password.html">
